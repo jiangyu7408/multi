@@ -2,6 +2,9 @@
     "name": "jiangyu7408/multi",
     "description": "并行执行多个命令的小工具",
     "autoload": {
+        "files": [
+            "bin/multi.php"
+        ],
         "classmap": [
             "src/"
         ]
