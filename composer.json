@@ -1,0 +1,13 @@
+{
+    "name": "jiangyu7408/multi",
+    "description": "并行执行多个命令的小工具",
+    "autoload": {
+        "classmap": [
+            "src/"
+        ]
+    },
+    "require": {
+        "php": ">=5.5",
+        "phpunit/php-timer": "^1.0"
+    }
+}
