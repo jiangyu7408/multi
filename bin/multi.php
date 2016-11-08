@@ -11,8 +11,6 @@ use Tools\Command\JobFactory;
 use Tools\Command\JobHandler;
 use Tools\Command\JobPerformer;
 
-require __DIR__.'/../vendor/autoload.php';
-
 set_error_handler(function ($errno, $errstr) {
     if ($errno === E_WARNING && $errstr === 'stream_socket_accept(): accept failed: Operation timed out') {
         return;
