@@ -12,8 +12,13 @@ use Tools\Command\JobHandler;
 use Tools\Command\JobPerformer;
 
 set_error_handler(function ($errno, $errstr) {
-    if ($errno === E_WARNING && $errstr === 'stream_socket_accept(): accept failed: Operation timed out') {
-        return;
+    if ($errno === E_WARNING) {
+        if ($errstr === 'stream_socket_accept(): accept failed: Operation timed out') {
+            return;
+        }
+        if ($errstr === 'mkdir(): File exists') {
+            return;
+        }
     }
     if ($errno === E_NOTICE) {
         return;
